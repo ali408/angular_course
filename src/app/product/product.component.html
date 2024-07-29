@@ -6,24 +6,30 @@
     <div class="container">
         <div class="row g-5">
             <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
+                <div class=" border rounded text-center">
+                    <h3 class="py-3">{{productOne.name}}</h3>
+                    <img [src]="productOne.image" alt="ttt" class="d-block my-2 w-100 h-25">
+                    <p class="fw-bold">${{productOne.price}}</p>
+                    <p [class]="productOne.onSale ? '' : 'text-decoration-line-through'">Avilable</p>
+                    <button class="btn btn-primary mb-3">Add to card</button>
                 </div>
             </div>
             <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
+                <div class=" border rounded text-center">
+                    <h3 class="py-3">{{productTwo.name}}</h3>
+                    <img [src]="productTwo.image" alt="ttt" class="d-block my-2 w-100 h-25">
+                    <p class="fw-bold">${{productTwo.price}}</p>
+                    <p [class]="productTwo.onSale ? '' : 'text-decoration-line-through'">Avilable</p>
+                    <button class="btn btn-primary mb-3">Add to card</button>
                 </div>
             </div>
             <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
+                <div class=" border rounded text-center">
+                    <h3 class="py-3">{{productThree.name}}</h3>
+                    <img [src]="productThree.image" alt="ttt" class="d-block my-2 w-100 h-25">
+                    <p class="fw-bold">${{productThree.price}}</p>
+                    <p [class]="productThree.onSale ? '' : 'text-decoration-line-through'">Avilable</p>
+                    <button class="btn btn-primary mb-3">Add to card</button>
                 </div>
             </div>
         </div>
