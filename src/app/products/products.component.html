@@ -1,0 +1,15 @@
+<div class="products py-5">
+    <div class="container text-center">
+        <h2>All Products</h2>
+        <p>Find best suit meal from our list</p>
+    </div>
+    <div class="container">
+        <div class="row g-5">
+            @for(meal of meals;track meal.recipe_id){
+            <div role="button" class="col-4" (click)="goToProduct(meal.recipe_id)">
+                <app-product-card [meal]="meal"></app-product-card>
+            </div>
+            }
+        </div>
+    </div>
+</div>

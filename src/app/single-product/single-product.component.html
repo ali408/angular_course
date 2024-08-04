@@ -1,0 +1,32 @@
+<div class="single-product py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img class="w-75 rounded" [src]="meal.image_url" alt="">
+            </div>
+            <div class="col-6">
+                <h3>Title: {{meal.title}}</h3>
+                <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis saepe illum nulla
+                    praesentium
+                    quam labore asperiores suscipit aliquid unde odio illo adipisci eaque eligendi nostrum minima, animi
+                    sapiente deleniti doloremque.</p>
+                <h4>Publisher: {{meal.publisher}}</h4>
+                <p><strong>${{meal.price}}</strong></p>
+                @if(meal.onSale){
+                <button class="btn btn-primary">Add to card</button>
+                }@else {
+                <button class="btn btn-danger disabled">sold out</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- {
+publisher: '101 Cookbooks',
+title: 'Best Pizza Dough Ever',
+recipe_id: '47746',
+image_url:
+'http://forkify-api.herokuapp.com/images/best_pizza_dough_recipe1b20.jpg',
+onSale: true,
+price: 100,
+}, -->

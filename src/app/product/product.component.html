@@ -1,31 +1,24 @@
 <div class="products py-5">
     <div class="container text-center py-3">
-        <h2 class="text-primary">Products</h2>
+        <h2 class="text-primary">Suggest Products</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     </div>
     <div class="container">
         <div class="row g-5">
+            @for(product of suggestProducts;track product.recipe_id){
+
             <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
+                <div class="border rounded text-center overflow-hidden">
+                    <img [src]="product.image_url" [alt]="product.title">
+                    <div class="p-3">
+                        <h3>{{product.title}}</h3>
+                        <p><strong class="text-primary">${{product.price}}</strong></p>
+                        <p>{{product.publisher}}</p>
+                        <button class="btn btn-primary mt-3">Add to card</button>
+                    </div>
                 </div>
             </div>
-            <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
-                </div>
-            </div>
-            <div class="col col-lg-4 ">
-                <div class="p-3 border rounded text-center">
-                    <h3>Product Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate modi ipsa.</p>
-                    <button class="btn btn-primary">Learn more!</button>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </div>
